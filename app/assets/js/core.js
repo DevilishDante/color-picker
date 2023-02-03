@@ -8,10 +8,3 @@ function printColor(ev) {
     console.log([r, g, b])
     alert(`R: ${r}, G: ${g}, B: ${b}`)
 }
-document.addEventListener('DOMContentLoaded', function() {
-    var link = document.getElementById('pick-color');
-    // onClick's logic below:
-    link.addEventListener('click', function() {
-        hellYeah('xxx');
-    });
-});

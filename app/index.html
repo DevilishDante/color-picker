@@ -12,6 +12,7 @@
         <META http-equiv="X-UA-Compatible" content="IE=edge">
         <META NAME="http.language" CONTENT="fr-FX">
         <META name="theme-color" content="#7b590a">
+        <
         <!--CSS BASICS-->
         <link rel="stylesheet" href="./assets/CSS/style.css" type="text/css">
         <!-- <link rel="script" href="./assets/js/core.js" type="text/javascript"> -->
@@ -24,4 +25,13 @@
             <input type="color" id="pick_color" value="#D66853">
         </div>
     </body>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var link = document.getElementById('pick-color');
+            // onClick's logic below:
+            link.addEventListener('click', function() {
+                hellYeah('xxx');
+            });
+        });
+    </script>
 </html>
