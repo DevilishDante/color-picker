@@ -3,6 +3,10 @@
   "name": "Color Picker",
   "description": "Just simply pick color of your choice !",
   "version": "1.0",
+  "action": {
+    "default_title": "Click to view a popup",
+    "default_popup": "/app/index.html"
+  },
   "icons": {
     "16": "/app/assets/icons/icon-16.png",
     "32": "/app/assets/icons/icon-32.png",
