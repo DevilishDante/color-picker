@@ -13,19 +13,8 @@
     "48": "/app/assets/icons/icon-48.png",
     "128": "/app/assets/icons/icon-128.png"
   },
-  "web_accessible_resources": [{
-    "resources": ["script.js"],
+  "content_scripts": [{
+    "js": ["/app/assets/js/core.js"],
     "matches": ["<all_urls>"]
-  }],
-  "content_scripts": [
-    {
-      "js": [
-        "/app/assets/js/core.js"
-      ],
-      "matches": [
-        "https://developer.chrome.com/docs/extensions/*",
-        "https://developer.chrome.com/docs/webstore/*"
-      ]
-    }
-  ]
+  }]
 }
