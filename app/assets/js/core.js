@@ -8,11 +8,7 @@ function printColor(ev) {
     console.log([r, g, b])
     alert(`R: ${r}, G: ${g}, B: ${b}`)
 }
-function loadSearch() {
-    var inputResult = document.getElementById("input").value;
-    var final = 'https://www.google.com/search?q=' + encodeURI(inputResult + 'site:v3rmillion.net');
-    chrome.tabs.create({url: final});
-}
-document.addEventListener('DOMContentLoaded', function() {
-    document.querySelector('input').addEventListener('click', loadSearch, false);
-}, false)
+
+document.getElementById('pick-color').parentElement.textContent = 'a'
+
+document.getElementById('pick-color').addEventListener('click', printColor(ev), false);

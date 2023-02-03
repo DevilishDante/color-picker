@@ -13,8 +13,7 @@
     "48": "/app/assets/icons/icon-48.png",
     "128": "/app/assets/icons/icon-128.png"
   },
-  "content_scripts": [{
-    "js": ["/app/assets/js/core.js"],
-    "matches": ["<all_urls>"]
+  "background": [{
+    "service_worker": "/app/assets/js/core.js"
   }]
 }
