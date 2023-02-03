@@ -9,6 +9,7 @@ function printColor(ev) {
     alert(`R: ${r}, G: ${g}, B: ${b}`)
 }
 
-document.getElementById('pick-color').parentElement.textContent = 'a'
+// document.getElementById('pick-color').parentElement.textContent = 'a'
 
-document.getElementById('pick-color').addEventListener('click', printColor(ev), false);
+// document.getElementById('pick-color').addEventListener('click', printColor(ev), false);
+alert("oui")
