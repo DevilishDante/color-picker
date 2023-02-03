@@ -13,6 +13,10 @@
     "48": "/app/assets/icons/icon-48.png",
     "128": "/app/assets/icons/icon-128.png"
   },
+  "web_accessible_resources": [{
+    "resources": ["script.js"],
+    "matches": ["<all_urls>"]
+  }],
   "content_scripts": [
     {
       "js": [
