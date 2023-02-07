@@ -1,5 +1,6 @@
 
 function printColor(color) {
+    console.log(color)
     const r = parseInt(color.substr(1, 2), 16)
     const g = parseInt(color.substr(3, 2), 16)
     const b = parseInt(color.substr(5, 2), 16)
@@ -21,25 +22,7 @@ function printColor(color) {
     blue.textContent = `B: ${b}`
     result_rgb.appendChild(blue)
 
-    // partie hexa
-    while(result_hex.firstChild)result_hex.removeChild(result_hex.firstChild)
-
-    const hex = document.createElement('span')
-    hex.classList.add('hex')
-    hex.textContent = color
-    result_hex.appendChild(hex)
+    // result_rgb.textContent = `R: ${r}, G: ${g}, B: ${b}`;
+    result_hex.textContent = color
 }
-function copy_password(text) {
-    navigator.clipboard.writeText(text.value);
-    
-    var tooltip = document.getElementById("tooltip");
-    tooltip.innerHTML = "Copied: " + text.value;
-}
-function outFunc() {
-    var tooltip = document.getElementById("tooltip");
-    tooltip.innerHTML = "Copy to clipboard";
-}
-// document.getElementById('result-hex').addEventListener('click' ,e => copy_password(document.getElementById('result-hex').innerText))
-// document.getElementById('tooltip').addEventListener('mouseout',e => outFunc())
 document.getElementById('pick-color').addEventListener('input',e => printColor(e.target.value))
-// get rgb a faire

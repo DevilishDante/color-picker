@@ -9,17 +9,24 @@
     --c-color1: #7D4E57;
     --c-color2: #D66853; 
 }
-body{background-color: var(--c-bg);border-radius: 5px;padding: 5px;width: 382px;}
+body{
+    background-color: var(--c-bg);
+    border-radius: 5px;
+    padding: 5px;
+    width: 382px;
+}
 .logo{
     float: left;
     position: relative;
-    height: 48px;width: auto;
+    height: 48px;
+    width: auto;
     padding-top: 1rem;
     padding-left: 1rem;
 }
 .titre{
     color:whitesmoke;
-    width: 100%;text-align: center;
+    width: 100%;
+    text-align: center;
     font-family: "Sunny Spells";
     font-size: xx-large;
     color: var(--c-color2);
@@ -30,115 +37,44 @@ body{background-color: var(--c-bg);border-radius: 5px;padding: 5px;width: 382px;
     border-radius: 5px;
     border: 1px solid var(--c-second);
     box-shadow: 0px 1px 10px -3px var(--c-second);
-    padding: 1rem;color: whitesmoke;
-    font-size: large;
+    padding: 1rem;
+    color: whitesmoke;
 }
 input[type="color"] {
     border-radius: 5px;
-    height: 5rem;width: 5rem;
-    cursor: pointer;transition: 400ms;
+    height: 2rem;
+    width: 4rem;
+    cursor: pointer;
+    transition: 400ms;
     background-color: transparent;
     appearance: none;
-	-webkit-appearance: none;border: none;
+	-webkit-appearance: none;
+    border: none;
 }
 input[type="color"]::-webkit-color-swatch-wrapper {
     border-radius: 5px;
     border: 1px solid var(--c-second);
     box-shadow: 0px 1px 10px -3px var(--c-second);
-    height: 5rem;width: 5rem;padding: 0;
-    position: relative;left: 0;
+    height: 2rem;
+    width: 4rem;
+	padding: 0;
 }
 input[type="color"]::-webkit-color-swatch-wrapper:hover {
     border-radius: 10px;
     border: 1px solid var(--c-second);
     box-shadow: 0px 1px 5px 1px var(--c-color2);
-    height: 5rem;width: 5rem;cursor: pointer;
-    transition: 400ms;padding: 0;
+    height: 2rem;
+    width: 4rem;
+    cursor: pointer;
+    transition: 400ms;
+	padding: 0;
 }
 input[type="color"]::-webkit-color-swatch {
     border-radius: 5px;
     border: 1px solid var(--c-second);
     box-shadow: 0px 1px 10px -3px var(--c-second);
-    height: 5rem;width: 5rem;border: none;padding: 0;
+    height: 2rem;
+    width: 4rem;
+	border: none;
+    padding: 0;
 }
-.flex-container {
-    display: -ms-inline-flexbox;
-    display: -webkit-inline-flex;
-    display: inline-flex;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-flex-wrap: nowrap;
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
-    -webkit-justify-content: flex-start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-    -webkit-align-content: stretch;
-    -ms-flex-line-pack: stretch;
-    align-content: stretch;
-    -webkit-align-items: flex-start;
-    -ms-flex-align: start;
-    align-items: flex-start;
-    width: 100%;
-}
-.flex-item:nth-child(1) {
-    -webkit-order: 0;-ms-flex-order: 0;
-    order: 0;-webkit-flex: 0 1 auto;
-    -ms-flex: 0 1 auto;flex: 0 1 auto;
-    -webkit-align-self: auto;
-    -ms-flex-item-align: auto;
-    align-self: auto;
-}
-.flex-item:nth-child(2) {
-    -webkit-order: 0;-ms-flex-order: 0;
-    order: 0;-webkit-flex: 0 1 auto;
-    -ms-flex: 0 1 auto;flex: 0 1 auto;
-    -webkit-align-self: auto;
-    -ms-flex-item-align: auto;
-    align-self: auto;
-}
-.center{
-    margin-left: auto;
-    margin-right: auto;
-}
-#result-rgb, #result-hex{
-    text-align: center;
-    margin-left: 0px;
-}
-.red,.green,.blue,.hex{
-    background-color: var(--c-second);
-    padding: 0.5rem;border-radius: 5px;
-    margin: 5px;
-}
-.tooltip {
-    position: relative;
-    display: inline-block;
-}
-.tooltip .tooltiptext {
-    visibility: hidden;
-    width: 140px;
-    background-color: #555;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px;
-    position: absolute;
-    z-index: 1;
-    bottom: 150%;
-    left: 50%;
-    margin-left: -75px;
-    opacity: 0;
-    transition: opacity 0.3s;
-}
-.tooltip .tooltiptext::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #555 transparent transparent transparent;
-}
-.tooltip:hover .tooltiptext {visibility: visible;opacity: 1;}
