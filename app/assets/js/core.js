@@ -29,17 +29,41 @@ function printColor(color) {
     hex.textContent = color
     result_hex.appendChild(hex)
 }
-function copy_password(text) {
-    navigator.clipboard.writeText(text.value);
+// function copy_password(text) {
+//     navigator.clipboard.writeText(text.value);
     
-    var tooltip = document.getElementById("tooltip");
-    tooltip.innerHTML = "Copied: " + text.value;
+//     var tooltip = document.getElementById("tooltip");
+//     tooltip.innerHTML = "Copied: " + text.value;
+// }
+// function outFunc() {
+//     var tooltip = document.getElementById("tooltip");
+//     tooltip.innerHTML = "Copy to clipboard";
+// }
+function history(){
+    const array1 = ['a', 'b', 'c'];
+    array1.forEach(element => console.log(element));
 }
-function outFunc() {
-    var tooltip = document.getElementById("tooltip");
-    tooltip.innerHTML = "Copy to clipboard";
+function saveColor(color) {
+    const old = localStorage.getItem('colors')
+    if (!old) {
+        const colors = []
+        colors.push(color)
+        localStorage.setItem('colors', JSON.stringify(colors))
+    } else {
+        const colors = []
+        JSON.parse(old).forEach(color => colors.push(color))
+        if (colors.length >= 10) colors.shift()
+        colors.push(color)
+        localStorage.setItem('colors', JSON.stringify(colors))
+    }
 }
+function getColors() {
+    return JSON.parse(localStorage.getItem('colors'))
+}
+
 // document.getElementById('result-hex').addEventListener('click' ,e => copy_password(document.getElementById('result-hex').innerText))
 // document.getElementById('tooltip').addEventListener('mouseout',e => outFunc())
 document.getElementById('pick-color').addEventListener('input',e => printColor(e.target.value))
-// get rgb a faire
+document.getElementById('pick-color').addEventListener('change',e => saveColor(e.target.value))
+// document.getElementById('history').addEventListener('4*')
+// get rgb a faireold
