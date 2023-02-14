@@ -5,8 +5,7 @@ Just simply pick color of your choice !
 With my color picker, you can :
 
 * Copy/paste color picked in hex and rgb
-* Save some color, if you want
-
+* Save some color, if you want (10 max)
 * and choose color with the picker or pick a color
 
 ## Preview

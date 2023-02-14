@@ -119,14 +119,8 @@ input[type="color"]::-webkit-color-swatch {
     -ms-flex-item-align: auto;
     align-self: auto;
 }
-.center{
-    margin-left: auto;
-    margin-right: auto;
-}
-#result-rgb, #result-hex{
-    text-align: center;
-    margin-left: 0px;
-}
+.center{margin-left: auto;margin-right: auto;}
+#result-rgb, #result-hex{text-align: center;margin-left: 0px;}
 .red,.green,.blue,.hex{
     background-color: var(--c-second);
     padding: 0.5rem;border-radius: 5px;
@@ -141,17 +135,13 @@ input[type="color"]::-webkit-color-swatch {
 .clr{
     background-Color:whitesmoke;
     border-Radius:5px;
-    height:3rem;
-    width:3.5rem;
-    float:Left;
-    position:relative;
-    margin-Left:5px;
-    margin-Top:5px;
+    height:3rem;width:3.5rem;
+    float:Left;position:relative;
+    margin-Left:5px;margin-Top:5px;
     cursor:pointer;
 }
 #history{
-    padding: 1rem;
-    height: 130px;
+    padding: 1rem;height: 130px;
     margin: 0 1.5rem 0 1.5rem;
 }
 .color-pick{min-width: 70%; padding-top: 1rem}
