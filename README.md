@@ -11,3 +11,11 @@ With my color picker, you can :
 ## Preview
 
 ![1676383341549](image/README/1676383341549.png)
+
+## How to install
+
+1) Open your extensions manager tab (`<browser>://extensions`)
+2) Enable "Developper Mode"
+3) Drag and drop the downloaded zip file into the tab
+4) Once uploaded and loaded, disable "Developper Mode"
+5) Have fun using "Color Picker" !
