@@ -9,14 +9,15 @@
     --c-color1: #7D4E57;
     --c-color2: #D66853; 
 }
-body{background-color: var(--c-bg);border-radius: 5px;padding: 5px;width: 500px;}
+body{background-color: var(--c-bg);border-radius: 5px;padding: 5px;width: 500px;height: auto;}
 .logo{
     float: left;
     position: relative;
     height: 48px;width: auto;
-    padding-top: 1rem;
-    padding-left: 1rem;
+    padding-top: 5px;
+    padding-left: 5px;
 }
+p{margin:0}h1{margin:5px}
 .titre{
     color:whitesmoke;
     width: 100%;text-align: center;
@@ -30,7 +31,7 @@ body{background-color: var(--c-bg);border-radius: 5px;padding: 5px;width: 500px;
     border-radius: 5px;
     border: 1px solid var(--c-second);
     box-shadow: 0px 1px 10px -3px var(--c-second);
-    padding: 1rem;color: whitesmoke;
+    padding: 0.5rem;color: whitesmoke;
     font-size: large;
 }
 .hex:hover{
@@ -130,4 +131,10 @@ input[type="color"]::-webkit-color-swatch {
     background-color: var(--c-second);
     padding: 0.5rem;border-radius: 5px;
     margin: 5px;
+}
+.red:hover,.green:hover,.blue:hover{
+    background-color: var(--c-bg);
+    padding: 0.5rem;border-radius: 5px;
+    margin: 5px;transition: 400ms;
+    cursor:pointer;
 }

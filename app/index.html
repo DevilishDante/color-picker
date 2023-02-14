@@ -15,16 +15,17 @@
         <img src="./assets/icons/icon-32.png" class="logo" alt="logo">
         <h1 class="titre">Color Picker V1</h1>
         <div class="window">
-            <p>Pick a color :</p>
+            <p>Pick a color</p>
             <div class="flex-container">
                 <div class="flex-item center" style="min-width:30%">
                     <input type="color" id="pick-color" value="#D66853">
                     <input type="button" id="save-color" value="save">
                 </div>
                 <div class="flex-item center" style="min-width: 80%">
-                    <span id="tooltip"></span>
-                    <div id="result-rgb"></div><br>
-                    <div id="result-hex"></div>
+                    <div class="d-inline-flex p-2">
+                        <div id="result-rgb"></div><br>
+                        <div id="result-hex"></div>
+                    </div>
                 </div>
             </div>
         </div>
