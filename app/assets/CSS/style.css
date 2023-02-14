@@ -138,3 +138,21 @@ input[type="color"]::-webkit-color-swatch {
     margin: 5px;transition: 400ms;
     cursor:pointer;
 }
+.clr{
+    background-Color:whitesmoke;
+    border-Radius:5px;
+    height:3rem;
+    width:3.5rem;
+    float:Left;
+    position:relative;
+    margin-Left:5px;
+    margin-Top:5px;
+    cursor:pointer;
+}
+#history{
+    padding: 1rem;
+    height: 130px;
+    margin: 0 1.5rem 0 1.5rem;
+}
+.color-pick{min-width: 70%; padding-top: 1rem}
+.color-main{min-width:30%}

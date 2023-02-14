@@ -29,7 +29,7 @@ function printColor(color) {
 
     // partie hexa
     while (result_hex.firstChild) result_hex.removeChild(result_hex.firstChild)
-    const hex = document.createElement('span')
+    const hex = document.createElement('div')
     hex.classList.add('hex')
     hex.textContent = color
     hex.onclick = () => {
@@ -43,19 +43,9 @@ function history() {
     const history = document.getElementById("history")
     while (history.firstChild) history.removeChild(history.firstChild)
     const colors = getColors()
-    history.style.padding = "1rem"
-    history.style.height = "130px"
     for (let index = 0; index < 10; index++) {
         const color = document.createElement('span')
-        color.style.backgroundColor = "whitesmoke"
-        color.style.borderRadius = "5px"
-        color.style.height = "3rem"
-        color.style.width = "3.5rem"
-        color.style.float = "Left"
-        color.style.position = "relative"
-        color.style.marginLeft = "5px"
-        color.style.marginTop = "5px"
-        color.style.cursor = "pointer"
+        color.classList.add('clr')
         history.appendChild(color)
         tooltip(color,'top','Choose the color !')
     }
@@ -70,12 +60,16 @@ function history() {
     })
 }
 function tooltip(element,position,text){
-    const tooltip = document.createElement('span')
-    // element.style.position = "relative"
+    const tooltip = document.createElement('tooltip')
     element.classList.add('tooltip')
     element.appendChild(tooltip)
     tooltip.classList.add(`tooltiptext-${position}`)
     tooltip.textContent = text
+}
+function clearHistory() {
+    console.log(localStorage.getItem('colors'))
+    if (localStorage.getItem('colors')) localStorage.removeItem('colors')
+    history()
 }
 function saveColor(color) {
     const old = localStorage.getItem('colors')
@@ -96,4 +90,5 @@ function getColors(){ return JSON.parse(localStorage.getItem('colors'))}
 history()
 document.getElementById('pick-color').addEventListener('input',e  => printColor(e.target.value))
 document.getElementById('pick-color').addEventListener('change',e  => printColor(e.target.value))
-document.getElementById('save-color').addEventListener('click',( ) => saveColor(document.getElementById('pick-color').value))
+document.getElementById('save-color').addEventListener('click',() => saveColor(document.getElementById('pick-color').value))
+document.getElementById('clear-history').addEventListener('click',()  => clearHistory())
