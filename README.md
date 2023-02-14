@@ -1,7 +1,5 @@
 # ![1676383092268](image/README/1676383092268.png) Color picker
 
-Just simply pick color of your choice !
-
 With my color picker, you can :
 
 * Copy/paste color picked in hex and rgb
@@ -18,4 +16,4 @@ With my color picker, you can :
 2) Enable "Developper Mode"
 3) Drag and drop the downloaded zip file into the tab
 4) Once uploaded and loaded, disable "Developper Mode"
-5) Have fun using "Color Picker" !
+5) Have fun using "Color Picker" ! 😸
