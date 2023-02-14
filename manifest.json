@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Color Picker",
-  "description": "Just simply pick color of your choice !",
+  "description": "Select the color that you wish !",
   "version": "1.0",
   "action": {
     "default_title": "Click to view a popup",
