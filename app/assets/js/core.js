@@ -43,12 +43,13 @@ function history() {
     const history = document.getElementById("history")
     while (history.firstChild) history.removeChild(history.firstChild)
     const colors = getColors()
-    for (let index = 0; index < 10; index++) {
+    for (let i = 0; i < 10; i++) {
         const color = document.createElement('span')
         color.classList.add('clr')
         history.appendChild(color)
         tooltip(color,'top','Choose the color !')
     }
+    if (!localStorage.getItem('colors')) return
     let i = 9
     colors.forEach(e => {
         history.querySelectorAll('span')[i].style.backgroundColor = e
@@ -56,7 +57,7 @@ function history() {
             document.getElementById('pick-color').value=e
             printColor(e)
         });
-        i--
+        --i
     })
 }
 function tooltip(element,position,text){
@@ -67,7 +68,6 @@ function tooltip(element,position,text){
     tooltip.textContent = text
 }
 function clearHistory() {
-    console.log(localStorage.getItem('colors'))
     if (localStorage.getItem('colors')) localStorage.removeItem('colors')
     history()
 }
