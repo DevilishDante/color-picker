@@ -57,6 +57,7 @@ function history() {
         color.style.marginTop = "5px"
         color.style.cursor = "pointer"
         history.appendChild(color)
+        tooltip(color,'top','Choose the color !')
     }
     let i = 9
     colors.forEach(e => {
@@ -67,6 +68,14 @@ function history() {
         });
         i--
     })
+}
+function tooltip(element,position,text){
+    const tooltip = document.createElement('span')
+    // element.style.position = "relative"
+    element.classList.add('tooltip')
+    element.appendChild(tooltip)
+    tooltip.classList.add(`tooltiptext-${position}`)
+    tooltip.textContent = text
 }
 function saveColor(color) {
     const old = localStorage.getItem('colors')
