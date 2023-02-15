@@ -47,25 +47,33 @@ function history() {
         const color = document.createElement('span')
         color.classList.add('clr')
         history.appendChild(color)
-        tooltip(color,'top','Choose the color !')
     }
     if (!localStorage.getItem('colors')) return
     let i = 9
     colors.forEach(e => {
-        history.querySelectorAll('span')[i].style.backgroundColor = e
-        history.querySelectorAll('span')[i].addEventListener('click', () => {
+        colored = history.querySelectorAll('span')[i]
+        colored.style.backgroundColor = e
+        colored.style.cursor = 'pointer'
+        tooltip(colored,'top','Choose me  !',true,'3rem','3.5rem')
+        colored.addEventListener('click', () => {
             document.getElementById('pick-color').value=e
             printColor(e)
         });
         --i
     })
 }
-function tooltip(element,position,text){
+function tooltip(element,position,text,empty,h,w){
     const tooltip = document.createElement('tooltip')
-    element.classList.add('tooltip')
+    const tcontent = document.createElement('content')
+    if (empty){
+        tooltip.style.width = w
+        tooltip.style.height = h
+    }
     element.appendChild(tooltip)
-    tooltip.classList.add(`tooltiptext-${position}`)
-    tooltip.textContent = text
+    tcontent.classList.add(`t-content`)
+    tcontent.classList.add(`t-${position}`)
+    tcontent.textContent = text
+    tooltip.appendChild(tcontent)
 }
 function clearHistory() {
     if (localStorage.getItem('colors')) localStorage.removeItem('colors')

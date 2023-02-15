@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
+        <title>ColorPicker</title>
         <META NAME="Author" CONTENT="DevilishDante">
         <META NAME="Description" CONTENT="Color Picker by DevilishDante">
         <META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
@@ -18,7 +19,9 @@
         <div class="window">
             <div class="flex-container">
                 <div class="flex-item center color-main">
-                    <input type="color" id="pick-color" value="#D66853">
+                    <tooltip><input type="color" id="pick-color" value="#D66853">
+                        <content class="t-content t-right">Click &<br>Pick !</content>
+                    </tooltip>
                     <input type="button" id="save-color" value="save">
                 </div>
                 <div class="flex-item center color-pick">
