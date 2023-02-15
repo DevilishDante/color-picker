@@ -148,6 +148,9 @@ input[type="color"]::-webkit-color-swatch {
     margin-Left:5px;margin-Top:5px;
     cursor:not-allowed;
 }
+.clr:hover{
+    transition: 400ms;
+}
 #history{
     padding: 0.5rem;height: 130px;
     margin: 0 2rem 0 2rem;

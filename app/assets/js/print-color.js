@@ -37,7 +37,7 @@ export function printColor(color) {
         navigator.clipboard.writeText(color)
         setTimeout(() => hex.textContent = color, 1500)
     }
-    svg(invertColor(color,false))
+    svg(invertColor(color,true))
     result_hex.appendChild(hex)
 }
 // inverse la couleur du picker
