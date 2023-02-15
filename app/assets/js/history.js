@@ -1,5 +1,5 @@
 // affiche l'historique des couleurs
-import {tooltip} from './print-color.js'
+import {tooltip,printColor} from './print-color.js'
 export function history() {
     const history = document.getElementById("history")
     while (history.firstChild) history.removeChild(history.firstChild)
