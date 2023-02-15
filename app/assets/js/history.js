@@ -10,8 +10,8 @@ export function history() {
         history.appendChild(color)
     }
     if (!localStorage.getItem('colors')) return
-    let i = 9
-    colors.forEach(e => {
+    let i = 0
+    colors.slice().reverse().forEach(function(e) {
         const colored = history.querySelectorAll('span')[i]
         colored.style.backgroundColor = e
         colored.style.cursor = 'pointer'
@@ -20,8 +20,8 @@ export function history() {
             document.getElementById('pick-color').value=e
             printColor(e)
         });
-        --i
-    })
+        ++i    
+    });
 }
 // suprime l'historique
 export function clearHistory() {
