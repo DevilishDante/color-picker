@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html>
     <head>
-        <title>Color Picker</title>
         <META NAME="Author" CONTENT="DevilishDante">
         <META NAME="Description" CONTENT="Color Picker by DevilishDante">
         <META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
@@ -10,37 +9,22 @@
         <META HTTP-EQUIV="content-type" CONTENT="text/html; charset=UTF-8">
         <!--CSS BASICS-->
         <link rel="stylesheet" href="./assets/CSS/style.css" type="text/css">
-        <!-- ADDONS -->
-        <link rel="stylesheet" href="./assets/CSS/tooltip.css" type="text/css">
-        <script type="module" src="./assets/js/core.js" defer></script>
+        <script src="./assets/js/core.js" defer></script>
     </head>
     <body>
-        <img src="./assets/icons/icon-48.png" class="logo" alt="logo">
-        <h1 class="titre">Color Picker</h1>
+        <img src="./assets/icons/icon-32.png" class="logo" alt="logo">
+        <h1 class="titre">Color Picker V1</h1>
         <div class="window">
+            <p>Pick a color :</p>
             <div class="flex-container">
-                <div class="flex-item center color-main">
-                    <tooltip>
-                        <input type="color" id="pick-color" value="#D66853">
-                        <div class="pick">
-                            <div id="pick-svg"></div>
-                        </div>
-                        <content class="t-content t-right">Click &<br>Pick !</content>
-                    </tooltip>
-                    <input type="button" id="save-color" value="save">
+                <div class="flex-item center" style="min-width:30%">
+                    <input type="color" id="pick-color" value="#D66853">
                 </div>
-                <div class="flex-item center color-pick">
-                    <div class="d-inline-flex p-2">
-                        <div id="result-rgb"></div><br>
-                        <div id="result-hex"></div>
-                    </div>
+                <div class="flex-item center" style="min-width: 80%">
+                    <div id="result-rgb"></div><br>
+                    <div id="result-hex"></div>
                 </div>
             </div>
-        </div>
-        <br>
-        <div class="window">
-            <div id="history"></div>
-            <input type="button" id="clear-history" value="clear">
         </div>
     </body>
 </html>
