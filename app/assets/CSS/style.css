@@ -7,7 +7,8 @@
     --c-main: #212D40;
     --c-second: #364156;
     --c-color1: #7D4E57;
-    --c-color2: #D66853; 
+    --c-color2: #D66853;
+    --c-tooltip: #242424;
 }
 body{background-color: var(--c-bg);border-radius: 5px;padding: 5px;width: 500px;height: auto;}
 .logo{
@@ -138,7 +139,7 @@ input[type="color"]::-webkit-color-swatch {
     height:3rem;width:3.5rem;
     float:Left;position:relative;
     margin-Left:5px;margin-Top:5px;
-    cursor:pointer;
+    cursor:not-allowed;
 }
 #history{
     padding: 1rem;height: 130px;
