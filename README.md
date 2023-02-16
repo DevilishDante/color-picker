@@ -5,10 +5,11 @@ With my color picker, you can :
 * Copy/paste color picked in hex and rgb
 * Save some color, if you want (10 max)
 * and choose color with the picker or pick a color
+* Manage saved colors using history()
 
 ## Preview
 
-![1676383341549](image/README/1676383341549.png)
+![1676551448398](image/README/1676551448398.png)
 
 ## How to install
 
