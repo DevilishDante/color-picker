@@ -90,6 +90,20 @@ input[type="color"]::-webkit-color-swatch {
     box-shadow: 0px 1px 10px -3px var(--c-second);
     height: 5rem;width: 5rem;border: none;padding: 0;
 }
+a{
+    background-color: var(--c-bg);
+    padding: 0.5rem;border-radius: 5px;
+    border: none;width: 5rem;
+    color: whitesmoke;
+    cursor: pointer;
+    transition: 400ms;
+    text-decoration: none;
+    display: inline;
+}
+a:hover{
+    background-color: var(--c-second);
+    transition: 400ms;
+}
 .flex-container {
     display: -ms-inline-flexbox;
     display: -webkit-inline-flex;
