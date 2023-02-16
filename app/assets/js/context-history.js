@@ -25,9 +25,10 @@ export function context(element) {
     element.parentNode.appendChild(d)
     d.style.left = xMousePosition + "px"
     d.style.top = yMousePosition + "px"
+
     d.onmouseover = function() { this.style.cursor = 'pointer' } 
-    d.onclick = function() { element.parentNode.removeChild(d)  }
-    document.body.onclick = function() { element.parentNode.removeChild(d)  }
+    d.onclick = function() { d.remove()  }
+    document.body.onclick = function() { d.remove() }
 
     var p1 = document.createElement('p')
     d.appendChild(p1)

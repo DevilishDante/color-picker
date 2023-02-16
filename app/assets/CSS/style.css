@@ -10,7 +10,7 @@
     --c-color2: #D66853;
     --c-tooltip: #242424;
 }
-body{background-color: var(--c-bg);border-radius: 5px;padding: 5px;width: 94.3vw;height: auto;}
+body{background-color: var(--c-bg);border-radius: 5px;padding: 5px;max-width: 500px;width: 100%; min-width: 500px;height: auto;}
 .logo{
     float: left;
     position: relative;
