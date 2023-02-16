@@ -1,4 +1,4 @@
-import {clearHistory} from './history.js'
+import {clearHistory,clearColor} from './history.js'
 var xMousePosition = 0
 var yMousePosition = 0
 
@@ -9,7 +9,7 @@ onmousemove = function(e){
 }
 
 function remove(element) {
-    alert("Clear"+element)
+    clearColor(element.id)
 }
 
 function remove_all(element) {

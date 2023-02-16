@@ -14,13 +14,14 @@ export function history() {
     let i = 0
     colors.slice().reverse().forEach(function(e) {
         const colored = history.querySelectorAll('span')[i]
-        colored.style.backgroundColor = e
+        colored.style.backgroundColor = e.color
+        colored.id = e.id
         colored.style.cursor = 'pointer'
         colored.addEventListener("contextmenu",function() {return context(this)})
         tooltip(colored,'top','Choose me  !',true,'3rem','3.5rem')
         colored.addEventListener('click', () => {
-            document.getElementById('pick-color').value=e
-            printColor(e)
+            document.getElementById('pick-color').value=e.color
+            printColor(e.color)
         });
         ++i    
     });
@@ -30,18 +31,18 @@ export function clearHistory() {
     if (localStorage.getItem('colors')) localStorage.removeItem('colors')
     history()
 }
-// suprime une couleur dans l'historique
-export function clearColor() {
+// suprime une couleur précise dans l'historique
+export function clearColor(ColorsId) {
     if (localStorage.getItem('colors')) {
-        const removeProduct = productId => {
-            let products = localStorage.getItem('colors')
-            const index = products.findIndex(product => product.product_id === productId)
-            if (index > -1) {
-                products.slice(index, 1)
+        const colors = JSON.parse(localStorage.getItem('colors'))
+        const clrs = []
+        colors.forEach(color => {
+            if (color.id !== ColorsId){
+                clrs.push(color)
             }
-            localStorage.setItem('colors')
-        }
-    history()
+        })
+        localStorage.setItem('colors', JSON.stringify(clrs))
+        history()
     }
 }
 // sauvegarde la couleur dans l'historique
@@ -49,13 +50,21 @@ export function saveColor(color) {
     const old = localStorage.getItem('colors')
     if (!old) {
         const colors = []
-        colors.push(color)
+        let id = crypto.randomUUID();
+        colors.push({color:color,id:id})
         localStorage.setItem('colors', JSON.stringify(colors))
     } else {
+        let id = crypto.randomUUID()
         const colors = []
         JSON.parse(old).forEach(color => colors.push(color))
+        var exists = false
+        colors.forEach(clr => {
+            if (clr.id === id) return exists = true
+            if (clr.color === color) return exists = true
+        })
+        if (exists) return 
         if (colors.length >= 10) colors.shift()
-        colors.push(color)
+        colors.push({color:color,id:id})
         localStorage.setItem('colors', JSON.stringify(colors))
     }
     history()
