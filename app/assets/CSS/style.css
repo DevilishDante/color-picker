@@ -180,4 +180,9 @@ a:hover{
     position: absolute;
     font-weight: bolder;
     bottom:5px;right: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 3px solid var(--c-color1);
 }
