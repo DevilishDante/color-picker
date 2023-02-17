@@ -62,7 +62,12 @@ export function saveColor(color) {
             if (clr.id === id) return exists = true
             if (clr.color === color) return exists = true
         })
-        if (exists) return 
+        if (exists) {document.getElementById('save-color').onclick = () => {
+            const noadd = document.getElementById('no-add') 
+            noadd.innerHTML = '<div class="red-alert">This color already exist !</div>'
+            setTimeout(() => printColor(color), 1500)
+            }
+        return}
         if (colors.length >= 10) colors.shift()
         colors.push({color:color,id:id})
         localStorage.setItem('colors', JSON.stringify(colors))

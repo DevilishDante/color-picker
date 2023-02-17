@@ -171,3 +171,13 @@ a:hover{
 }
 .color-pick{min-width: 70%; padding-top: 1rem}
 .color-main{min-width:30%}
+.red-alert{
+    border-radius: 3px;
+    background-color: salmon;
+    color:black;
+    font-size: medium;
+    padding: 0.5rem; z-index: 999;
+    position: absolute;
+    font-weight: bolder;
+    bottom:5px;right: 5px;
+}
