@@ -9,7 +9,6 @@ With my color picker, you can :
 
 ## Preview
 
-![1676551448398](image/README/1676551448398.png)
 
 ## How to install
 
