@@ -1,5 +1,7 @@
 # ![1676383092268](image/README/1676383092268.png) Color picker v1.1
 
+**Warning : Work only on chromium**
+
 With my color picker, you can :
 
 * Copy/paste color picked in hex and rgb
