@@ -1,6 +1,6 @@
 # ![1676383092268](image/README/1676383092268.png) Color picker
 
-**Warning : Work only on chromium**
+**Warning : Work only on chromium** 
 
 With my color picker, you can :
 
